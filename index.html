@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/output.css">
+</head>
+
+<body>
+
+    <section class="py-12 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto max-w-4xl ">
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl ">
+                <div class="bg-gradient-to-r from-red-600 to-indigo-700 p-6">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide animate-pulse">Bài 1: Kiểm tra
+                        đậu/rớt</h1>
+                    <p class="text-blue-100 mt-2">Nhập thông tin để kiểm tra kết quả tuyển sinh</p>
+                </div>
+
+                <div class="p-6 md:p-8 space-y-6">
+                    <!-- Input grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Điểm chuẩn -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Điểm chuẩn</label>
+                            <input type="number" id="diemChuan" placeholder="Nhập điểm chuẩn..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+
+                        <!-- Khu vực -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Khu vực</label>
+                            <select id="khuVuc"
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300 appearance-none bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjYmQ0ZGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im03IDE1IDUgNSA1LTUiLz48L3N2Zz4=')] bg-no-repeat bg-[right_1rem_center]">
+                                <option value="" disabled selected>Chọn khu vực</option>
+                                <option value="2">A</option>
+                                <option value="1">B</option>
+                                <option value="0.5">C</option>
+                            </select>
+                        </div>
+
+                        <!-- Đối tượng -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Đối tượng</label>
+                            <select id="doiTuong"
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300 appearance-none bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjYmQ0ZGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im03IDE1IDUgNSA1LTUiLz48L3N2Zz4=')] bg-no-repeat bg-[right_1rem_center]">
+                                <option value="" disabled selected>Chọn đối tượng</option>
+                                <option value="2.5">Đối tượng 1</option>
+                                <option value="1.5">Đối tượng 2</option>
+                                <option value="1">Đối tượng 3</option>
+                            </select>
+                        </div>
+
+                        <!-- Điểm môn 1 -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Điểm môn 1</label>
+                            <input id="mon1" type="number" placeholder="Nhập điểm môn 1..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+
+                        <!-- Điểm môn 2 -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Điểm môn 2</label>
+                            <input id="mon2" type="number" placeholder="Nhập điểm môn 2..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+
+                        <!-- Điểm môn 3 -->
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Điểm môn 3</label>
+                            <input id="mon3" type="number" placeholder="Nhập điểm môn 3..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                    </div>
+
+                    <button id="btnBai1"
+                        class="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-red-600 to-indigo-600 text-white font-bold rounded-lg shadow-md hover:from-red-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 hover:shadow-lg active:scale-95">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clipboard-check">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                <path d="m9 14 2 2 4-4" />
+                            </svg>
+                            <span>Kiểm tra kết quả</span>
+                        </span>
+                    </button>
+                    <!-- Kết quả hiển thị với animation -->
+                    <div id="ketQua" class="mt-6 transition-all duration-500 ease-in-out opacity-0 h-0 overflow-hidden">
+                        <div class="p-6 rounded-xl bg-opacity-10 bg-blue-500 border-2 border-blue-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Kết quả tuyển sinh</h3>
+                            <div class="flex items-center space-x-4">
+                                <div id="ketQuaIcon" class="flex-shrink-0 text-4xl">📊</div>
+                                <div>
+                                    <p id="ketQuaText" class="text-lg font-medium"></p>
+                                    <p id="ketQuaChiTiet" class="text-gray-600 mt-1"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl">
+                <div class="bg-gradient-to-r from-red-600 to-indigo-700 p-6">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide animate-pulse">Bài 2: TÍnh tiền
+                        điện </h1>
+                </div>
+
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Họ Và tên </label>
+                            <input type="text" id="hoTen" placeholder="Nhập họ tên..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Số điện </label>
+                            <input id="soDien" type="number" placeholder="Nhập số điện..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                    </div>
+
+                    <button id="btnBai2"
+                        class="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-red-600 to-indigo-600 text-white font-bold rounded-lg shadow-md hover:from-red-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 hover:shadow-lg active:scale-95">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clipboard-check">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                <path d="m9 14 2 2 4-4" />
+                            </svg>
+                            <span>Tính tiền điện </span>
+                        </span>
+                    </button>
+                    <div id="ketQua2"
+                        class="mt-6 transition-all duration-500 ease-in-out opacity-0 h-0 overflow-hidden">
+                        <div id="noiDungKetQua2"
+                            class="p-6 rounded-xl bg-opacity-10 bg-blue-500 border-2 border-blue-200 text-white text-lg font-semibold shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl ">
+                <div class="bg-gradient-to-r from-red-600 to-indigo-700 p-6">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide animate-pulse">Bài 3: Tính tiền
+                        thuế </h1>
+                </div>
+
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Họ Và tên </label>
+                            <input type="text" id="hoVaTen" placeholder="Nhập họ tên..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Tổng thu nhập (triệu VND):</label>
+                            <input id="thuNhap" type="number" placeholder="Nhập số thu nhập..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Số người phụ thuộc: </label>
+                            <input id="soNguoi" type="number" placeholder="Nhập số người..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                    </div>
+
+                    <button id="btnBai3"
+                        class="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-red-600 to-indigo-600 text-white font-bold rounded-lg shadow-md hover:from-red-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 hover:shadow-lg active:scale-95">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clipboard-check">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                <path d="m9 14 2 2 4-4" />
+                            </svg>
+                            <span>Tính Thuế</span>
+                        </span>
+                    </button>
+                    <div id="ketQua3"
+                        class="mt-6 transition-all duration-500 ease-in-out opacity-0 h-0 overflow-hidden">
+                        <div id="noiDungKetQua3"
+                            class="p-6 rounded-xl bg-opacity-10 bg-blue-500 border-2 border-blue-200 text-white text-lg font-semibold shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl ">
+                <div class="bg-gradient-to-r from-red-600 to-indigo-700 p-6">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-wide animate-pulse">Bài 4: Tính tiền
+                        cáp</h1>
+                </div>
+
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <select id="loaiKhachHang"
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300 appearance-none bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjYmQ0ZGIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWRvd24iPjxwYXRoIGQ9Im03IDE1IDUgNSA1LTUiLz48L3N2Zz4=')] bg-no-repeat bg-[right_1rem_center]">
+                                <option value="" disabled selected>Chọn loại khách hàng </option>
+                                <option value="nhaDan">Nhà dân </option>
+                                <option value="doanhNghiep">Doanh nghiệp </option>
+                        </select>
+                        <div id="soKetNoi" class="space-y-2">
+
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Mã khách hàng:</label>
+                            <input id="maKhachHang" type="text" placeholder="Nhập mã khách hàng..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-gray-700 font-medium">Số kênh cao cấp </label>
+                            <input id="soKenh" type="number" placeholder="Nhập số kênh..."
+                                class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300 hover:border-blue-300">
+                        </div>
+                    </div>
+
+                    <button id="btnBai4"
+                        class="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-red-600 to-indigo-600 text-white font-bold rounded-lg shadow-md hover:from-red-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 hover:shadow-lg active:scale-95">
+                        <span class="flex items-center justify-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clipboard-check">
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                <path d="m9 14 2 2 4-4" />
+                            </svg>
+                            <span>Tính tiền cáp</span>
+                        </span>
+                    </button>
+                    <div id="ketQua4"
+                        class="mt-6 transition-all duration-500 ease-in-out opacity-0 h-0 overflow-hidden">
+                        <div id="noiDungKetQua4"
+                            class="p-6 rounded-xl bg-opacity-10 bg-blue-500 border-2 border-blue-200 text-white text-lg font-semibold shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
